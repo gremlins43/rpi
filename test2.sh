@@ -40,7 +40,7 @@ then
         currentDay=$(cat /home/pi/script/currentDay)
        echo "current day_" $currentDay "_"
         echo "Today_" $TODAY "_"
-        if [ "$currentDay"=="$TODAY" ]
+        if [ "$currentDay" == "$TODAY" ]
         then
 		echo "equal"
 	else
