@@ -18,7 +18,7 @@ then
         then
                 if [ -f currentDay ]
                 then
-                        currentDay=$(cat /home/pi/script/temperatura/currentDay)
+                        currentDay=$(cat currentDay)
                                 if [ "$currentDay" == "$TODAY" ]
                                 then
                                         if [ -f today.csv ]
@@ -39,7 +39,7 @@ then
                         echo $TODAY > currentDay
                 fi
         else
-                touch /home/pi/script/temperatura/dayMinMax.csv
+                touch dayMinMax.csv
         fi
 else
                 echo "`date +%D` `date +%T`;" $TEMP >> temp_log.csv
